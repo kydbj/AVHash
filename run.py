@@ -4,7 +4,7 @@ import random
 import json
 import numpy as np
 import torch
-from dataset_per_label import load_data
+from dataset import load_data
 from train import train_model
 import argparse
 
@@ -69,9 +69,9 @@ def run():
 
     # Load dataset
     train_dataloader, val_dataloader, data_dataloader = load_data(
-        data_set_config = data_set_config
+        data_set_config = data_set_config   # 修改， Anet_z 中的所有权重都大于1
         ,batch_size = batch_size
-        ,num_workers = num_workers
+        ,num_workers = num_workers                # 修改
         ,pn=5
     )
 
