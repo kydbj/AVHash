@@ -115,7 +115,7 @@ pip install -r requirements.txt
    "dataset":  dataset ("actnet" or "fcvid")
    "data_path": path to the image frames floder,
    "num_class":  dataset classes, 200(actnet) or 239(fcivd)
-	 "train_list": "path to the train set file",
+   "train_list": "path to the train set file",
    "val_list": "path to the validation set file",
    "test_list": "path to the test set file",
    "retrieval_list": "path to the databese set (train set) file"
@@ -129,18 +129,18 @@ pip install -r requirements.txt
   To train AVHash on FCVID:
 
   ```bash
-  python run.py --dataset fcvid --hashcode_size 64 --lr le-4 --max_iter 100 --device cuda:0 --batch_size 128 --result_log_dir '' --result_weight_dir ''
+  python run.py --dataset "path to fcvid.json" --hashcode_size 64 --lr le-4 --max_iter 100 --device cuda:0 --batch_size 128 --result_log_dir " " --result_weight_dir " "
   ```
 
   To train AVHash on ActivityNet:
 
   ```bash
-  python run.py --dataset actnet --hashcode_size 64 --lr le-4 --max_iter 100 --device cuda:0 --batch_size 128 --result_log_dir '' --result_weight_dir ''
+  python run.py --dataset "path to Anet.json" --hashcode_size 64 --lr le-4 --max_iter 100 --device cuda:0 --batch_size 128 --result_log_dir " " --result_weight_dir " "
   ```
 
   Options:
 
-  - `--dataset`: fcvid or actnet.
+  - `--dataset`: path to Anet.json or fcvid.json
   - `--hashcode_size`: code length of hash.
   - `--lr`: learning rate.
   - `--max_iter`: training epochs.
@@ -153,21 +153,20 @@ pip install -r requirements.txt
   ## Test
   To test AVHash on FCVID:
   ```bash
-  python test.py --dataset fcvid --hashcode_size 64 --device cuda:0 --batch_size 128 --weight_path "weight_path"
+  python test.py --dataset "path to fcvid.json" --hashcode_size 64 --device cuda:0 --batch_size 128 --weight_path " "
   ```
   To test AVHash on ActivityNet: 
   ```bash
-  python test.py --dataset actnet --hashcode_size 64 --device cuda:0 --batch_size 128 --weight_path "weight_path"
+  python test.py --dataset "path to Anet.json" --hashcode_size 64 --device cuda:0 --batch_size 128 --weight_path " "
   ```
 
   Options:
 
-  - `--dataset`: fcvid or actnet.
+  - `--dataset`: path to Anet.json or fcvid.json
   - `--hashcode_size`: code length of hash.
   - `--device`: choose the gpu to use.
   - `--weight_path`: the path to the weights to be loaded.
   - `--batch_size`: the number of videos in a batch.
   - `--weight_path`: the path to the weights to be loaded.
-  - `--batch_size`: the number of videos in a batch.
 
  
