@@ -52,38 +52,39 @@ pip install -r requirements.txt
       The structure of the HDF5 file storing video features is as follows:
       ```
       ActivityNet_image.h5
-			├── v_---9CpRcKoU
-			│ └── vectors
-			│ ├── Shape: (25, 768)
-			│ └── Type: float32
-			├── v_--0edUL8zmA
-			│ └── vectors
-			│ ├── Shape: (25, 768)
-			│ └── Type: float32
-			├── v_--1DO2V4K74
-			│ └── vectors
-			│ ├── Shape: (25, 768)
-			│ └── .....
-			└── .....
+      ├── v_---9CpRcKoU
+      │ └── vectors
+      │ └── Type: float32
+      ├── v_--0edUL8zmA
+      │ └── vectors
+      │ ├── Shape: (25, 768)
+      │ └── Type: float32
+      ├── v_--1DO2V4K74
+      │ └── vectors
+      │ ├── Shape: (25, 768)
+      │ └── .....
+      └── .....
       ```
       
       The structure of the HDF5 file storing audio features is as follows:
+       ```
+      ActivityNet_audio.h5
+      ├── v_---9CpRcKoU
+      │ └── vectors
+      │ └── Type: float32
+      ├── v_--0edUL8zmA
+      │ └── vectors
+      │ ├── Shape: (25, 768)
+      │ └── Type: float32
+      ├── v_--1DO2V4K74
+      │ └── vectors
+      │ ├── Shape: (25, 768)
+      │ └── .....
+      └── .....
       ```
-			ActivityNet_audio.h5
-			├── v_---9CpRcKoU
-			│ └── vectors
-			│ ├── Shape: (25, 768)
-			│ └── Type: float32
-			├── v_--0edUL8zmA
-			│ └── vectors
-			│ ├── Shape: (25, 768)
-			│ └── Type: float32
-			├── v_--1DO2V4K74
-			│ └── vectors
-			│ ├── Shape: (25, 768)
-			│ └── .....
-			└── .....
-      ```
+
+	
+      
       In above structure:
       - Each video's ID serves as the top-level group name.
       - Each group contains a dataset named vectors.
