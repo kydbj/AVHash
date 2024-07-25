@@ -69,9 +69,9 @@ def run():
 
     # Load dataset
     train_dataloader, val_dataloader, data_dataloader = load_data(
-        data_set_config = data_set_config   # 修改， Anet_z 中的所有权重都大于1
+        data_set_config = data_set_config
         ,batch_size = batch_size
-        ,num_workers = num_workers                # 修改
+        ,num_workers = num_workers
         ,pn=5
     )
 
