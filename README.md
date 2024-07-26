@@ -1,5 +1,9 @@
 # AVHash
-This repository is the PyTorch implementation of ACM MM 2024 (CCF A) paper: "AVHash:Joint Audio-Visual Hashing for Video Retrieval".
+This repository is the PyTorch implementation of ACM MM 2024 (CCF A) paper:  "AVHash:Joint Audio-Visual Hashing for Video Retrieval".
+
+<p align="center">
+  <img src="./img/architecture.svg">
+</p>
 
 ## Catalogue
 
